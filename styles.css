@@ -74,4 +74,54 @@ blockquote {
   color: #444;
   margin: 2em 0;
 }
+/* ---- Mobile-friendly tweaks ---- */
 
+/* Prevent iOS from randomly enlarging text */
+html { -webkit-text-size-adjust: 100%; }
+
+/* Make images/embeds never overflow */
+img, video, iframe { max-width: 100%; height: auto; }
+
+/* So long headlines don’t blow up on small screens */
+.hero h2 { word-break: keep-all; }
+
+/* Tablet and down */
+@media (max-width: 900px) {
+  .container { padding: 0 16px; }
+  .hero h2 { font-size: 26px; line-height: 1.25; }
+  .article h1 { font-size: 26px; }
+}
+
+/* Phones */
+@media (max-width: 640px) {
+  /* Header: stack logo + nav and avoid overflow */
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;        /* lets links wrap to new lines */
+    gap: 10px 14px;
+    margin-top: 4px;
+  }
+  nav a { margin: 0; padding: 6px 0; }
+
+  /* Cards: go single-column */
+  .grid.two { grid-template-columns: 1fr; }
+
+  /* Comfortable reading sizes */
+  .article { padding: 20px 0; }
+  .article h1 { font-size: 24px; }
+  .article p, .subtitle { font-size: 16px; line-height: 1.7; }
+
+  /* Buttons easier to tap */
+  .btn { padding: 12px 16px; border-radius: 12px; }
+}
+
+/* Ultra-small phones */
+@media (max-width: 380px) {
+  .logo a { font-size: 22px; }
+  .hero h2 { font-size: 22px; }
+}

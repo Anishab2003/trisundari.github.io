@@ -135,3 +135,51 @@ img, video, iframe { max-width: 100%; height: auto; }
   font-size: clamp(2rem, 3.2vw + 1rem, 3.25rem);
   margin: 0 0 1rem;
 }
+
+/* --- Layout polish --- */
+.hero--tight { padding: 36px 0 8px; }
+.section { margin: 24px 0 8px; }
+
+.section-header {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 24px;
+  padding: 18px 0; border-top: 1px solid var(--border);
+}
+.eyebrow {
+  display: inline-block; font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 6px;
+}
+.section-title { font-family:'Georgia',serif; font-size: 24px; margin: 0 0 6px; }
+.section-blurb { margin: 0; color: var(--muted); }
+
+/* Cards grid */
+.cards-3 { 
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 900px){ .cards-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px){ .cards-3 { grid-template-columns: 1fr; } }
+
+.card--link {
+  display: flex; flex-direction: column; gap: 12px; transition: transform .12s ease, box-shadow .12s ease;
+}
+.card--link:hover { transform: translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,.06); }
+.card-title { margin: 0 0 6px; font-size: 20px; }
+.card-text { margin: 0; color: var(--ink); }
+
+/* Buttons */
+.btn-pill { border-radius: 999px; padding: 10px 16px; }
+.btn-soft {
+  background: #e4c6bf; color: #4b3b37;
+  border-radius: 10px; padding: 10px 14px; display: inline-block;
+}
+.btn-soft:hover { opacity:.95; text-decoration:none; }
+
+/* Hero title fix (from earlier) */
+.hero-title{
+  font-family: var(--font-heading, 'Georgia', 'Times New Roman', serif);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  font-size: clamp(1.9rem, 3vw + 1rem, 2.6rem);
+  margin: 0 0 1rem;
+}

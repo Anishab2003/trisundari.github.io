@@ -126,3 +126,12 @@ img, video, iframe { max-width: 100%; height: auto; }
   .hero h2 { font-size: 22px; }
 }
 
+.hero-title{
+  font-family: var(--font-heading, serif);
+  font-weight: inherit;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  font-size: clamp(2rem, 3.2vw + 1rem, 3.25rem);
+  margin: 0 0 1rem 0;
+}

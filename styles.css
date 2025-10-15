@@ -127,12 +127,11 @@ img, video, iframe { max-width: 100%; height: auto; }
 }
 
 .hero-title{
-  font-family: var(--font-heading,Georgia', 'Times New Roman',serif);
-  font-weight:'Georgia', 'Times New Roman', serif
-;
+  font-family: var(--font-heading, 'Georgia', 'Times New Roman', serif);
+  font-weight: 700;              /* or 600 if you prefer */
   color: var(--ink);
   line-height: 1.15;
   letter-spacing: -0.005em;
   font-size: clamp(2rem, 3.2vw + 1rem, 3.25rem);
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem;
 }

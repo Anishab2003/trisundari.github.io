@@ -398,3 +398,15 @@ img, video, iframe { max-width: 100%; height: auto; }
   .article h1 { font-size: 24px; line-height: 1.25; }
   .article p { font-size: 16px; line-height: 1.7; }
 }
+
+.logo-img {
+  height: 48px;              /* Adjust this to fit your header nicely */
+  width: auto;
+  vertical-align: middle;
+}
+
+@media (max-width: 640px) {
+  .logo-img {
+    height: 38px;            /* slightly smaller on phones */
+  }
+}

@@ -326,3 +326,75 @@ img, video, iframe { max-width: 100%; height: auto; }
     padding: 28px 22px;
   }
 }
+/* ---------- Base mobile-safe defaults ---------- */
+html { -webkit-text-size-adjust: 100%; }
+img, video, iframe { max-width: 100%; height: auto; }
+.container { max-width: 1040px; padding: 0 16px; }
+
+/* ---------- Hero ---------- */
+.hero--tight { padding: 28px 0 8px; }
+.hero-inner { max-width: 820px; }
+.hero-title {
+  font-family: var(--font-heading, 'Georgia','Times New Roman',serif);
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: clamp(1.6rem, 1rem + 1.6vw, 2.2rem);
+  margin: 0 0 12px;
+}
+.sub { max-width: 760px; color: var(--muted); }
+
+/* ---------- Featured Journal block ---------- */
+.featured-journal {
+  background: linear-gradient(180deg, #fff7f3, #fffaf6);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px 24px;
+  margin: 28px 0 24px;
+  display: flex; align-items: center; justify-content: center;
+  text-align: left; box-shadow: 0 4px 18px rgba(0,0,0,.04);
+}
+.featured-journal h3 { font-size: 26px; margin: 6px 0 8px; }
+.featured-journal p { font-size: 16px; line-height: 1.7; margin: 0 0 14px; }
+.featured-journal .btn-soft { padding: 10px 16px; border-radius: 12px; }
+
+/* ---------- Cards grid: desktop → tablet → phone ---------- */
+.grid.home-cards {
+  display: grid; gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 0 36px;
+}
+@media (max-width: 900px) {            /* tablets */
+  .grid.home-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {            /* phones */
+  .grid.home-cards { grid-template-columns: 1fr; }
+  .featured-journal { padding: 24px 18px; }
+}
+
+/* ---------- Card polish ---------- */
+.card--link {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.card-title { font-size: 20px; margin: 0 0 6px; }
+.card-text { font-size: 16px; line-height: 1.65; margin: 0 0 10px; }
+.btn-soft { background:#e4c6bf; color:#4b3b37; border-radius:10px; padding:10px 14px; }
+
+/* ---------- Header: stack nav on phones ---------- */
+.site-header .container { display:flex; align-items:center; justify-content:space-between; padding:14px 16px; }
+@media (max-width: 640px){
+  .site-header .container { flex-direction: column; align-items: flex-start; gap: 6px; }
+  nav { display:flex; flex-wrap: wrap; gap: 8px 14px; }
+  nav a { padding: 6px 0; margin: 0; }
+  .logo a { font-size: 22px; }
+}
+
+/* ---------- Article pages (readability on small screens) ---------- */
+.article { max-width: 760px; margin: 0 auto; padding: 22px 0; }
+@media (max-width: 640px){
+  .article h1 { font-size: 24px; line-height: 1.25; }
+  .article p { font-size: 16px; line-height: 1.7; }
+}

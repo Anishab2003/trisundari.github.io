@@ -133,17 +133,16 @@ img, video, iframe { max-width: 100%; height: auto; }
   --bindu:#b64033;
   --max:72rem;
 }
-
-/* HERO */
-.hero{ background:var(--bg); padding:5rem 1.25rem 2.5rem; }
-.hero .wrap{ max-width:var(--max); margin:0 auto; }
-
 .hero-title{
-  font-family: "Georgia","EB Garamond",serif;
-  font-weight:700; color:var(--ink);
-  line-height:1.15; letter-spacing:-0.005em;
-  font-size:clamp(2rem,3.2vw+1rem,3.25rem);
-  margin:0 0 1rem 0;
+  font-family: var(--font-heading, inherit);
+  font-weight: inherit;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  font-size: clamp(2rem, 3.2vw + 1rem, 3.25rem);
+  margin: 0 0 1rem 0;
+}
+
 }
 
 /* bindu + subheading aligned */

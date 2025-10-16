@@ -679,3 +679,48 @@ header.site-header nav a:hover { color: var(--accent); transform: translateY(-1p
 
 /* Hide the CSS bindu on the home page (logo image already has one) */
 .home .logo a::after { display: none !important; }
+
+/* ---------- MOBILE HEADER POLISH ---------- */
+
+/* Larger logo on phones */
+@media (max-width: 768px){
+  .site-header .container { padding: 14px 16px; }
+  .logo a{
+    font-size: 34px;           /* bigger logo text */
+    line-height: 1;            /* tighter */
+  }
+
+  /* Keep header elements stacked neatly */
+  .header-flex{ 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 10px;
+  }
+
+  /* Make the nav a smooth horizontal scroller (no ugly wrap) */
+  .main-nav{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;              /* swipe to scroll */
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    width: 100%;
+    padding: 6px 2px 10px;
+    border-top: 1px solid #eadfd6; /* subtle divider under logo */
+  }
+  .main-nav a{
+    font-size: 18px;               /* clearer tap targets */
+    font-weight: 600;
+    padding: 6px 0;
+    flex: 0 0 auto;                /* prevents squish */
+  }
+  /* hide scrollbars */
+  .main-nav::-webkit-scrollbar{ display:none; }
+  .main-nav{ scrollbar-width: none; }
+}
+
+/* Slightly stronger contrast on the beige header (keeps logo crisp) */
+.site-header{
+  background:#f8f2ec;
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+}

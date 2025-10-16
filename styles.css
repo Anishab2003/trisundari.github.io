@@ -498,7 +498,7 @@ img, video, iframe { max-width: 100%; height: auto; }
 }
 
 .logo-img {
-  height: 120px;      /* adjust between 100–140px to find the sweet spot */
+  height: 150px;      /* adjust between 100–140px to find the sweet spot */
   width: auto;        /* keeps proportions correct */
   display: block;
   object-fit: contain;

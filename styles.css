@@ -504,11 +504,11 @@ img, video, iframe { max-width: 100%; height: auto; }
 
 @media (max-width: 640px) {
   .logo-img {
-    height: 72px;   /* smaller but still visible on mobile */
+    height: 150px;   /* smaller but still visible on mobile */
   }
 }
 .logo-img {
-  height: 100px;     /* adjust this until it feels balanced */
+  height: 320px;     /* adjust this until it feels balanced */
   width: auto;
   display: block;
 }
@@ -532,7 +532,7 @@ img, video, iframe { max-width: 100%; height: auto; }
 }
 
 .logo-img {
-  height: 250px;      /* adjust between 100–140px to find the sweet spot */
+  height: 320px;      /* adjust between 100–140px to find the sweet spot */
   width: auto;        /* keeps proportions correct */
   display: block;
   object-fit: contain;

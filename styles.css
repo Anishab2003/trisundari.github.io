@@ -400,7 +400,7 @@ img, video, iframe { max-width: 100%; height: auto; }
 }
 
 .logo-img {
-  height: 48px;              /* Adjust this to fit your header nicely */
+  height: 78px;              /* Adjust this to fit your header nicely */
   width: auto;
   vertical-align: middle;
 }
@@ -411,7 +411,7 @@ img, video, iframe { max-width: 100%; height: auto; }
   }
 }
 .logo-img {
-  height: 78px;          /* increase size — try 72px, adjust to taste */
+  height: 72px;          /* increase size — try 72px, adjust to taste */
   width: auto;           /* keeps proportions */
   vertical-align: middle;
   margin-top: -4px;      /* optional: aligns better with text */

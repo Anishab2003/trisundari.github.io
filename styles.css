@@ -686,7 +686,7 @@ header.site-header nav a:hover { color: var(--accent); transform: translateY(-1p
 @media (max-width: 768px){
   .site-header .container { padding: 14px 16px; }
   .logo a{
-    font-size: 34px;           /* bigger logo text */
+    font-size: 72px;           /* bigger logo text */
     line-height: 1;            /* tighter */
   }
 

@@ -524,7 +524,7 @@ img, video, iframe { max-width: 100%; height: auto; }
 }
 /* Logo sizing */
 .logo-img{
-  height: 110px !important;   /* adjust to taste: 100–130px works well */
+  height: 150px !important;   /* adjust to taste: 100–130px works well */
   width: auto !important;
   display: block !important;
   vertical-align: middle;

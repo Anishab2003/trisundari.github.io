@@ -676,3 +676,6 @@ header.site-header nav a:hover { color: var(--accent); transform: translateY(-1p
 
 /* Hide the automatic bindu added to the text logo on the homepage only */
 .home .logo a::after { display: none !important; }
+
+/* Hide the CSS bindu on the home page (logo image already has one) */
+.home .logo a::after { display: none !important; }

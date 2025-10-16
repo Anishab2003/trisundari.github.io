@@ -61,18 +61,6 @@ nav a:hover {
   transform: translateY(-1px);
 }
 
-/* Bindu next to logo */
-.logo a::after {
-  content: "";
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background: #c4161c; /* red bindu */
-  border-radius: 50%;
-  margin-left: 6px;
-  vertical-align: middle;
-}
-
 /* Mobile version (stacked) */
 @media (max-width: 768px) {
   .site-header .container {
@@ -639,14 +627,7 @@ header.site-header nav a {
 
 header.site-header nav a:hover { color: var(--accent); transform: translateY(-1px); }
 
-/* Keep the bindu */
-header.site-header .logo a::after {
-  content: "";
-  display: inline-block;
-  width: 12px; height: 12px;
-  background: #c4161c; border-radius: 50%;
-  margin-left: 6px; vertical-align: middle;
-}
+
 
 /* Mobile */
 @media (max-width: 768px){
@@ -654,3 +635,38 @@ header.site-header .logo a::after {
   header.site-header nav { flex-wrap: wrap; gap: 12px 18px; margin-top: 6px; }
   header.site-header nav a { font-size: 16px; }
 }
+/* === HEADER LAYOUT + NAV TYPOGRAPHY === */
+.site-header {
+  background: #f8f2ec;                /* beige */
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+}
+
+.header-flex{
+  display:flex; align-items:center; justify-content:space-between;
+  gap: 32px; padding: 18px 40px; max-width:1200px; margin:0 auto;
+}
+
+.logo a{ font-family:'Georgia','Times New Roman',serif; font-weight:700; font-size:28px; color:#1f1c1a; letter-spacing:-0.5px; }
+
+/* bindu on text logo */
+.logo a::after{ content:""; width:12px; height:12px; background:#c4161c; border-radius:50%; display:inline-block; margin-left:6px; vertical-align:middle; }
+
+/* main nav on the right */
+.main-nav{ display:flex; align-items:center; gap:28px; }
+.main-nav a{
+  font: 600 17px/1 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink); letter-spacing:.01em; transition: color .2s ease, transform .15s ease;
+}
+.main-nav a:hover{ color: var(--accent); transform: translateY(-1px); }
+
+/* mobile */
+@media (max-width: 768px){
+  .header-flex{ flex-direction:column; align-items:flex-start; padding:14px 20px; }
+  .main-nav{ flex-wrap:wrap; gap:12px 18px; }
+  .main-nav a{ font-weight:600; font-size:16px; }
+}
+
+/* optional: hide bindu if you add class .no-bindu to the logo */
+.logo.no-bindu a::after{ display:none; }

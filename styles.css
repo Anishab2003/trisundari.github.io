@@ -456,3 +456,26 @@ img, video, iframe { max-width: 100%; height: auto; }
     height: 72px;   /* smaller but still visible on mobile */
   }
 }
+.logo-img {
+  height: 100px;     /* adjust this until it feels balanced */
+  width: auto;
+  display: block;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+@media (max-width: 640px) {
+  .logo-img {
+    height: 72px;   /* scales logo for phone screens */
+  }
+}

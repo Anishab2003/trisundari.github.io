@@ -410,3 +410,13 @@ img, video, iframe { max-width: 100%; height: auto; }
     height: 38px;            /* slightly smaller on phones */
   }
 }
+
+
+.logo-img {
+  height: 48px;       /* Adjust if needed */
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Remove the old bindu that was automatically added */
+.logo a::after { content: none; }

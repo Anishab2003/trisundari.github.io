@@ -479,3 +479,29 @@ img, video, iframe { max-width: 100%; height: auto; }
     height: 72px;   /* scales logo for phone screens */
   }
 }
+
+.logo-img {
+  height: 120px;      /* adjust between 100–140px to find the sweet spot */
+  width: auto;        /* keeps proportions correct */
+  display: block;
+  object-fit: contain;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+@media (max-width: 640px) {
+  .logo-img {
+    height: 80px;     /* resize gracefully for phones */
+  }
+}

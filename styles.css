@@ -505,3 +505,28 @@ img, video, iframe { max-width: 100%; height: auto; }
     height: 80px;     /* resize gracefully for phones */
   }
 }
+/* Logo sizing */
+.logo-img{
+  height: 110px !important;   /* adjust to taste: 100–130px works well */
+  width: auto !important;
+  display: block !important;
+  vertical-align: middle;
+  max-height: none !important;
+  max-width: none !important;
+}
+
+/* Keep header aligned */
+.site-header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 20px;
+}
+
+/* Turn off the old CSS bindu if you had one */
+.logo a::after{ content:none; }
+
+/* Phone */
+@media (max-width:640px){
+  .logo-img{ height: 76px !important; }
+}

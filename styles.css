@@ -13,24 +13,82 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:1000px;margin:0 auto;padding:0 20px}
+/* ---- HEADER STYLING ---- */
 .site-header {
+  background: #f8f2ec;  /* soft beige */
   border-bottom: 1px solid var(--border);
-  background: #f8f2ec;   /* soft beige background */
   position: sticky;
   top: 0;
-  z-index: 10;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.04); /* gentle depth */
-}
-.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
-.logo a{font-family: 'Georgia', 'Times New Roman', serif; font-weight:700; font-size:26px; color:var(--ink)}
-nav a {
-  margin-left: 18px;
-  color: #3a322f;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  transition: color 0.2s ease;
+  z-index: 100;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo styling */
+.logo a {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--ink);
+  letter-spacing: -0.5px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px; /* spacing between links */
+}
+
+nav a {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 17px;
+  color: var(--ink);
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Bindu next to logo */
+.logo a::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #c4161c; /* red bindu */
+  border-radius: 50%;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* Mobile version (stacked) */
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 20px;
+  }
+  nav {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-top: 8px;
+  }
+  nav a {
+    font-size: 16px;
+  }
+}
 nav a:hover {
   color: var(--accent);
 }

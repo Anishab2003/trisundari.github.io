@@ -432,3 +432,27 @@ img, video, iframe { max-width: 100%; height: auto; }
     height: 56px;  /* smaller on phones */
   }
 }
+
+.logo-img {
+  height: 100px;         /* increase this to your desired size */
+  width: auto;           /* keeps proportions correct */
+  display: block;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+@media (max-width: 640px) {
+  .logo-img {
+    height: 72px;   /* smaller but still visible on mobile */
+  }
+}

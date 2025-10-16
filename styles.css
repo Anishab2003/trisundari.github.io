@@ -23,7 +23,17 @@ a:hover{text-decoration:underline}
 }
 .site-header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
 .logo a{font-family: 'Georgia', 'Times New Roman', serif; font-weight:700; font-size:26px; color:var(--ink)}
-nav a{margin-left:16px;color:var(--ink)}
+nav a {
+  margin-left: 18px;
+  color: #3a322f;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
 .hero{padding:48px 0 16px}
 .hero h2{font-family: 'Georgia', serif; font-size:32px; line-height:1.2; margin:0 0 10px}
 .sub{color:var(--muted)}

@@ -556,7 +556,7 @@ img, video, iframe { max-width: 100%; height: auto; }
 }
 
 .logo-img {
-  height: 150px;      /* adjust between 100–140px to find the sweet spot */
+  height: 190px;      /* adjust between 100–140px to find the sweet spot */
   width: auto;        /* keeps proportions correct */
   display: block;
   object-fit: contain;
@@ -582,7 +582,7 @@ img, video, iframe { max-width: 100%; height: auto; }
 }
 /* Logo sizing */
 .logo-img{
-  height: 150px !important;   /* adjust to taste: 100–130px works well */
+  height: 190px !important;   /* adjust to taste: 100–130px works well */
   width: auto !important;
   display: block !important;
   vertical-align: middle;

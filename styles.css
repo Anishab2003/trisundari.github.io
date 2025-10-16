@@ -670,3 +670,9 @@ header.site-header nav a:hover { color: var(--accent); transform: translateY(-1p
 
 /* optional: hide bindu if you add class .no-bindu to the logo */
 .logo.no-bindu a::after{ display:none; }
+
+/* Hide any standalone .bindu used on the homepage */
+.home .bindu { display: none !important; }
+
+/* Hide the automatic bindu added to the text logo on the homepage only */
+.home .logo a::after { display: none !important; }

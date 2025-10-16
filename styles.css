@@ -410,13 +410,25 @@ img, video, iframe { max-width: 100%; height: auto; }
     height: 38px;            /* slightly smaller on phones */
   }
 }
-
-
 .logo-img {
-  height: 48px;       /* Adjust if needed */
-  width: auto;
+  height: 78px;          /* increase size — try 72px, adjust to taste */
+  width: auto;           /* keeps proportions */
   vertical-align: middle;
+  margin-top: -4px;      /* optional: aligns better with text */
 }
+
 
 /* Remove the old bindu that was automatically added */
 .logo a::after { content: none; }
+.site-header .container {
+  display: flex;
+  align-items: center;    /* vertically centers logo + nav */
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+@media (max-width: 640px) {
+  .logo-img {
+    height: 56px;  /* smaller on phones */
+  }
+}

@@ -13,7 +13,14 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:1000px;margin:0 auto;padding:0 20px}
-.site-header{border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:10}
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: #f8f2ec;   /* soft beige background */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04); /* gentle depth */
+}
 .site-header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
 .logo a{font-family: 'Georgia', 'Times New Roman', serif; font-weight:700; font-size:26px; color:var(--ink)}
 nav a{margin-left:16px;color:var(--ink)}
